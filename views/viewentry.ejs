@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+  <% today = new Date();
+      dd = +today.getDate();
+      if ((dd+'').length == 1) {
+        dd = '0' + dd;
+      }
+     defaultDate = today.getFullYear()+'-'+(1+today.getMonth())+'-'+dd;
+  %>
+  
+    <div class="wrapper">
+        <h1><%= title %></h1>
+        <div class="ra-r"></div>
+        <body>
+            <div style="margin:0 auto ; width:50%; padding:20px">
+              <form action="/usages/viewentry" method="post">
+              <label>Name: </label>
+              <input type="text" name="name" pattern=[a-zA-Z\s]+ required>
+                <br /> <br /> <br /> <br />
+              <label>From: </label>
+              <input type="date" name="Date" value = "0001-01-01" required >
+              <br /> <br /> <br /> <br />
+              <label>Until: 
+              <input type="date" name="Date" value = <%= defaultDate %> required >
+              <br /> <br /> <br /> <br />
+              <button>submit</button>
+                </form>
+              </div>
+          
+            </body>
+    </div>
+</div>
+   <% include partials/foot %>
+</html>

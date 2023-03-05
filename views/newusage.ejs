@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+    <div class="wrapper">
+        <h1><%= title %></h1>
+        <h2>Note: Enter data in minutes</h2>
+        <div class="ra-r"></div>
+        <body>
+            <div style="margin:0 auto ; width:50%; padding:20px">
+              <form action="/usages/create" method="post">
+              <label>Name</label>
+              <input type="text" name="name" pattern=[a-zA-Z\s]+ required>
+                <br /> <br /> <br /> <br />
+              <label>Education usage</label>
+              <input type="number" name="educationUsage" min="0" max="1440" required>
+                <br /> <br /> <br /> <br />
+                <label>Shopping Usage</label>
+              <input type="number" name="shoppingUsage" min="0" max="1440" required>
+                <br /> <br /> <br /> <br />
+                <label>Browsing Usage</label>
+              <input type="number" name="browsingUsage" min="0" max="1440" required>
+                <br /> <br /> <br /> <br />
+                <label>Social Media Usage</label>
+              <input type="number" name="socialMediaUsage" min="0" max="1440" required>
+                <br /> <br /> <br /> <br />
+              <button>submit</button>
+                </form>
+              </div>
+            </body>
+    </div>
+</div>
+   <% include partials/foot %>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+    <div class="wrapper">
+        <h1><%= title %></h1>
+        <div class="ra-r"></div>
+        <body>
+            <div style="margin:0 auto ; width:50%; padding:20px">
+              <form method="post">
+              <label>Name</label>
+              <input type="text" name="name" value = <%=  title %>>
+                <br /> <br /> <br /> <br />
+              <label>Education usage</label>
+              <input type="number" name="educationUsage" value = <%= education %>>
+                <br /> <br /> <br /> <br />
+                <label>Shopping Usage</label>
+              <input type="number" name="shoppingUsage" value = <%= shopping %>>
+                <br /> <br /> <br /> <br />
+                <label>Browsing Usage</label>
+              <input type="number" name="browsingUsage" value = <%= browsing %>>
+                <br /> <br /> <br /> <br />
+                <label>Social Media Usage</label>
+              <input type="number" name="socialMediaUsage" value = <%= social %>>
+                <br /> <br /> <br /> <br />
+              <button>submit</button>
+                </form>
+              </div>
+            </body>
+    </div>
+</div>
+   <% include partials/foot %>
+</html>
